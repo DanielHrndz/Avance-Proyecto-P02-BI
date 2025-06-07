@@ -1,5 +1,5 @@
 
-## 👥 Grupo #[#]
+## 👥 Grupo Gotham City
 
 | Nombre completo                            | Carnet    |
 |--------------------------------------------|-----------|
