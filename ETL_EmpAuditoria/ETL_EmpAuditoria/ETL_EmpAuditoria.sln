@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ETL_EmpAuditoria", "ETL_EmpAuditoria.dtproj", "{13466A75-D7D6-0A59-2039-4645A09B335B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13466A75-D7D6-0A59-2039-4645A09B335B}.Development|Default.ActiveCfg = Development
+		{13466A75-D7D6-0A59-2039-4645A09B335B}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD498687-6E0C-4A0A-B205-0D991234164E}
+	EndGlobalSection
+EndGlobal
