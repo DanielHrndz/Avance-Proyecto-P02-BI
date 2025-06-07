@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 50.024941763352004,
+            "y": 423.46963736446321
+          },
+          "nodeIndex": "Auditores",
+          "nodeLineageTag": "c1fa1aa0-2fda-49b9-80c5-fc3e62cffda9",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334.2186868147582,
+            "y": 248.19368973409291
+          },
+          "nodeIndex": "Auditorias",
+          "nodeLineageTag": "0c84d761-1b45-47ec-bcc0-bd90c9be2c23",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852.38945843240936,
+            "y": 275.02202268071005
+          },
+          "nodeIndex": "Dim_Fecha",
+          "nodeLineageTag": "9575298f-d7f2-42e1-9d40-606c97590cd6",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 618.38945843240936,
+            "y": 524.0440453614201
+          },
+          "nodeIndex": "Empresas",
+          "nodeLineageTag": "714eca3d-4c95-4d53-abeb-b181c8c054d6",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 550.26983563130784,
+            "y": -50
+          },
+          "nodeIndex": "Hallazgos",
+          "nodeLineageTag": "30cdf308-f929-4043-bf0e-03d83567243c",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 49.999999999999986,
+            "y": 205.83872413973074
+          },
+          "nodeIndex": "Tabla 1 (Auditores)",
+          "nodeLineageTag": "fd3c63c8-f7f7-4bc3-9d39-97d2894210cb",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

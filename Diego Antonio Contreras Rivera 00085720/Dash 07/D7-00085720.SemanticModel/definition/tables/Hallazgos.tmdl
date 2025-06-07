@@ -1,0 +1,77 @@
+table Hallazgos
+	lineageTag: 30cdf308-f929-4043-bf0e-03d83567243c
+
+	column 'Hallazgo ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: d3b9486d-7ff6-4e02-8406-e44cbfc7e78b
+		summarizeBy: count
+		sourceColumn: Hallazgo ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Auditoria_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4728dee8-d8c1-4add-a234-bfbc6993bed4
+		summarizeBy: none
+		sourceColumn: Auditoria_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: string
+		lineageTag: 7dc902eb-bb99-4996-ac7e-189ede8affb9
+		summarizeBy: none
+		sourceColumn: Tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Severidad
+		dataType: string
+		lineageTag: 6195a8e6-922b-43b3-9aef-6e242fe7bb37
+		summarizeBy: none
+		sourceColumn: Severidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 3d5a3aaa-43b3-4463-949e-9423cb1d57a6
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monto_Estimado
+		dataType: double
+		lineageTag: fb337678-b60e-4d54-9138-e5307c8f1c74
+		summarizeBy: sum
+		sourceColumn: Monto_Estimado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Afecta_Cumplimiento
+		dataType: string
+		lineageTag: 5c9facaa-6dfb-45ac-b50f-3a6ea6a4d347
+		summarizeBy: none
+		sourceColumn: Afecta_Cumplimiento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Hallazgos = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Hallazgos_Sheet = Origen{[Item="Hallazgos",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Hallazgos_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Hallazgo_ID", Int64.Type}, {"Auditoria_ID", Int64.Type}, {"Tipo", type text}, {"Severidad", type text}, {"Estado", type text}, {"Monto_Estimado", type number}, {"Afecta_Cumplimiento", type text}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Hallazgo_ID", "Hallazgo ID"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_ResultType = Table
+

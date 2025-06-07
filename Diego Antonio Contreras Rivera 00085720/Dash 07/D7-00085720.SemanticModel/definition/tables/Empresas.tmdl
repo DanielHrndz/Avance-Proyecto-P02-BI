@@ -1,0 +1,58 @@
+table Empresas
+	lineageTag: 714eca3d-4c95-4d53-abeb-b181c8c054d6
+
+	column 'Empresa ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a22344c-a155-4e95-97ee-557e2890f630
+		summarizeBy: count
+		sourceColumn: Empresa ID
+
+		annotation SummarizationSetBy = User
+
+	column Nombre
+		dataType: string
+		lineageTag: 3900cae3-743e-4e63-8fa9-fd2e04b6ae78
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Industria
+		dataType: string
+		lineageTag: bc9cb328-bae1-41e1-ba55-b7fa04a3030d
+		summarizeBy: none
+		sourceColumn: Industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sistema Origen'
+		dataType: string
+		lineageTag: bde4cc8e-0516-4917-88ab-b7270f7e54a5
+		summarizeBy: none
+		sourceColumn: Sistema Origen
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ubicacion
+		dataType: string
+		lineageTag: 8cb1bd60-6c6d-41a9-b9f8-78b37d3c3958
+		summarizeBy: none
+		sourceColumn: Ubicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Empresas = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Empresas_Sheet = Origen{[Item="Empresas",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Empresas_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Empresa_ID", Int64.Type}, {"Nombre", type text}, {"Industria", type text}, {"Sistema_Origen", type text}, {"Ubicacion", type text}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Empresa_ID", "Empresa ID"}, {"Sistema_Origen", "Sistema Origen"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_ResultType = Table
+

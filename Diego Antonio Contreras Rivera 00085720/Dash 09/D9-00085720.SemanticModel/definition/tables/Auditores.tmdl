@@ -1,0 +1,49 @@
+table Auditores
+	lineageTag: c1fa1aa0-2fda-49b9-80c5-fc3e62cffda9
+
+	column Auditor_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: c294708c-fcbd-4438-9e93-6bbb30be4125
+		summarizeBy: none
+		sourceColumn: Auditor_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nombre
+		dataType: string
+		lineageTag: 8ebfd107-2a12-44d5-801f-760ad0f6d740
+		summarizeBy: none
+		sourceColumn: Nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Especialidad
+		dataType: string
+		lineageTag: ae335a01-3eee-4dfa-a944-3c64546af03e
+		summarizeBy: none
+		sourceColumn: Especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 825575ea-11c4-486d-b3d7-f4a99c328866
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Auditores = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Auditores_Sheet = Origen{[Item="Auditores",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Auditores_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Auditor_ID", Int64.Type}, {"Nombre", type text}, {"Especialidad", type text}, {"Column4", type any}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

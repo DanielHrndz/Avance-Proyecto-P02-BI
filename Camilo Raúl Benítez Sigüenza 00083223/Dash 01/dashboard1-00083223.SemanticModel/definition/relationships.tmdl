@@ -1,0 +1,33 @@
+relationship bbf80337-4dab-4b29-b2b5-291bb176b30f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Fecha.Fecha
+	toColumn: LocalDateTable_72b6925e-8dce-4be6-9452-a7012b2d6073.Date
+
+relationship 21b4db26-b396-4791-8be7-27a93de13722
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Auditorias.Fecha
+	toColumn: LocalDateTable_1cc61e86-48a3-4bf9-8b9a-57ea0e94d26a.Date
+
+relationship AutoDetected_e84782e7-c678-4de0-81d4-4a7b9c8b69b4
+	fromColumn: Hallazgos.Auditoria_ID
+	toColumn: Auditorias.'Auditoria ID'
+
+relationship AutoDetected_dbcc5b54-d828-4e51-bb5e-63bd7d54627d
+	fromColumn: Auditorias.Empresa_ID
+	toColumn: Empresas.Empresa_ID
+
+relationship AutoDetected_0d85f4ad-9350-4161-8a4f-c7fca192c151
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Tabla 1 (Auditores)'.Nombre
+	toColumn: Auditores.Nombre
+
+relationship AutoDetected_a716377b-dbcc-4a27-8105-f9e40160e24c
+	fromColumn: Auditorias.Auditor_ID
+	toColumn: Auditores.Auditor_ID
+
+relationship AutoDetected_ad5b8b9f-1174-41c3-b05e-29c9e556e46f
+	isActive: false
+	fromColumn: Auditorias.Auditor_ID
+	toColumn: 'Tabla 1 (Auditores)'.Auditor_ID
+

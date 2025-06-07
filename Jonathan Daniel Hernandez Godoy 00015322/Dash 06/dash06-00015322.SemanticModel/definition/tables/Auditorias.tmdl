@@ -1,0 +1,84 @@
+table Auditorias
+	lineageTag: 0c84d761-1b45-47ec-bcc0-bd90c9be2c23
+
+	column 'Auditoria ID'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3269bc32-d82c-4f08-9e26-c3a81d290833
+		summarizeBy: count
+		sourceColumn: Auditoria ID
+
+		annotation SummarizationSetBy = User
+
+	column Empresa_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: e79868cd-efb7-4fa4-a56d-7db525e32727
+		summarizeBy: none
+		sourceColumn: Empresa_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Auditor_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 927d865a-15ce-4d91-afc7-e94d8dc9ffe4
+		summarizeBy: none
+		sourceColumn: Auditor_ID
+
+		annotation SummarizationSetBy = User
+
+	column Fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 97f33f80-74fe-422b-bb89-cf9677ac507e
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		variation Variación
+			isDefault
+			relationship: 21b4db26-b396-4791-8be7-27a93de13722
+			defaultHierarchy: LocalDateTable_1cc61e86-48a3-4bf9-8b9a-57ea0e94d26a.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Resultado
+		dataType: string
+		lineageTag: 1b900cfe-5c52-49d2-abcb-1e9fb19ec1b2
+		summarizeBy: none
+		sourceColumn: Resultado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nivel Riesgo'
+		dataType: string
+		lineageTag: 9730fe95-6c7a-4b77-b7f0-aa52afb292b3
+		summarizeBy: none
+		sourceColumn: Nivel Riesgo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cumple_IFRS
+		dataType: string
+		lineageTag: 66d8c4de-94d7-4f9a-b0a1-43875cc93416
+		summarizeBy: none
+		sourceColumn: Cumple_IFRS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Auditorias = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Auditorias_Sheet = Origen{[Item="Auditorias",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Auditorias_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Auditoria_ID", Int64.Type}, {"Empresa_ID", Int64.Type}, {"Auditor_ID", Int64.Type}, {"Fecha", type date}, {"Resultado", type text}, {"Nivel_Riesgo", type text}, {"Cumple_IFRS", type text}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Auditoria_ID", "Auditoria ID"}, {"Nivel_Riesgo", "Nivel Riesgo"}})
+				in
+				    #"Columnas con nombre cambiado"
+
+	annotation PBI_ResultType = Table
+

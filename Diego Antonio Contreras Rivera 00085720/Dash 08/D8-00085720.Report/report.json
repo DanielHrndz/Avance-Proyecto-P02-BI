@@ -1,0 +1,67 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "bc8f6b67d1c342760c56",
+      "config": "{}",
+      "name": "0eb7b74bdb5778bbc418"
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "bc8f6b67d1c342760c56",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1f02f904ef9b82c2bcf6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":578.8888888888889,\"z\":1,\"width\":797.7777777777777,\"height\":141.11111111111111,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"treemap\",\"projections\":{\"Group\":[{\"queryRef\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Año\",\"active\":true},{\"queryRef\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Trimestre\"},{\"queryRef\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Mes\"},{\"queryRef\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Día\"}],\"Values\":[{\"queryRef\":\"CountNonNull(Hallazgos.Hallazgo ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Auditorias\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"Hallazgos\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variación\",\"Property\":\"Fecha\"}},\"Hierarchy\":\"Jerarquía de fechas\"}},\"Level\":\"Año\"},\"Name\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Año\",\"NativeReferenceName\":\"Fecha Año\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variación\",\"Property\":\"Fecha\"}},\"Hierarchy\":\"Jerarquía de fechas\"}},\"Level\":\"Trimestre\"},\"Name\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Trimestre\",\"NativeReferenceName\":\"Fecha Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variación\",\"Property\":\"Fecha\"}},\"Hierarchy\":\"Jerarquía de fechas\"}},\"Level\":\"Mes\"},\"Name\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Mes\",\"NativeReferenceName\":\"Fecha Mes\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variación\",\"Property\":\"Fecha\"}},\"Hierarchy\":\"Jerarquía de fechas\"}},\"Level\":\"Día\"},\"Name\":\"Auditorias.Fecha.Variación.Jerarquía de fechas.Día\",\"NativeReferenceName\":\"Fecha Día\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Hallazgo ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Hallazgos.Hallazgo ID)\",\"NativeReferenceName\":\"Recuento de Hallazgo ID\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 141.11,
+          "width": 797.78,
+          "x": 0.00,
+          "y": 578.89,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"ac16c76547929617800b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":797.7777777777777,\"y\":578.8888888888889,\"z\":2,\"width\":482.22222222222223,\"height\":141.11111111111111,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Hallazgos.Estado\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Hallazgos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Estado\"},\"Name\":\"Hallazgos.Estado\",\"NativeReferenceName\":\"Estado\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}],\"selection\":[{\"properties\":{\"selectAllCheckboxEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"strictSingleSelect\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 141.11,
+          "width": 482.22,
+          "x": 797.78,
+          "y": 578.89,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"d2e0aca20f56b3a92865\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":578.8888888888889,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Hallazgos.Tipo\",\"active\":true}],\"Series\":[{\"queryRef\":\"Hallazgos.Estado\"}],\"Y\":[{\"queryRef\":\"CountNonNull(Hallazgos.Hallazgo ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Hallazgos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Tipo\"},\"Name\":\"Hallazgos.Tipo\",\"NativeReferenceName\":\"Tipo\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Estado\"},\"Name\":\"Hallazgos.Estado\",\"NativeReferenceName\":\"Estado\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Hallazgo ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Hallazgos.Hallazgo ID)\",\"NativeReferenceName\":\"Recuento de Hallazgo ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Hallazgo ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#00B837'\"}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Hallazgos\"}},\"Property\":\"Estado\"}},\"Right\":{\"Literal\":{\"Value\":\"'Abierto'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":-0.5}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Hallazgos\"}},\"Property\":\"Estado\"}},\"Right\":{\"Literal\":{\"Value\":\"'Cerrado'\"}}}}}]}}]}}}",
+          "filters": "[]",
+          "height": 578.89,
+          "width": 1280.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

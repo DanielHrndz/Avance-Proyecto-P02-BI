@@ -1,0 +1,28 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-ES
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Hallazgos","Empresas","Dim_Fecha","Auditorias","Auditores","Tabla 1 (Auditores)"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.143.1378.0 (25.05)+4e1de9c957866bc5336e0d250838314aa54ff3a8
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Hallazgos
+ref table Empresas
+ref table Dim_Fecha
+ref table DateTableTemplate_09e7a2d6-dec0-499d-970d-5cca878cf310
+ref table LocalDateTable_72b6925e-8dce-4be6-9452-a7012b2d6073
+ref table Auditorias
+ref table LocalDateTable_1cc61e86-48a3-4bf9-8b9a-57ea0e94d26a
+ref table Auditores
+ref table 'Tabla 1 (Auditores)'
+
+ref cultureInfo es-ES
+

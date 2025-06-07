@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../D9-00085720.SemanticModel"
+    }
+  }
+}
