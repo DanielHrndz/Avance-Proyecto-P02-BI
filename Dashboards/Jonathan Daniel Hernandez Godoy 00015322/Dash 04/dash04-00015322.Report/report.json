@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "pods": [
     {
@@ -34,22 +34,49 @@
       "name": "bc8f6b67d1c342760c56",
       "visualContainers": [
         {
-          "config": "{\"name\":\"5df3c20415ed2dedea4f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Auditores.Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Auditorias.Auditoria ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Auditores\",\"Type\":0},{\"Name\":\"a1\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Nombre\"},\"Name\":\"Auditores.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Auditorias.Auditoria ID)\",\"NativeReferenceName\":\"Recuento de Auditoria ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":-0.25}}}}}}}]}}}",
+          "config": "{\"name\":\"199528b0b64543abb4d8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":532.7261227071474,\"y\":420.99936748893106,\"z\":3000,\"width\":399.9493991144845,\"height\":299.5572422517394,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Hallazgos.Tipo\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Hallazgos.Hallazgo_ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Hallazgos\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Tipo\"},\"Name\":\"Hallazgos.Tipo\",\"NativeReferenceName\":\"Tipo\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Hallazgo_ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Hallazgos.Hallazgo_ID)\",\"NativeReferenceName\":\"Recuento de Hallazgo_ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Hallazgo_ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 720.00,
-          "width": 1280.00,
+          "height": 299.56,
+          "width": 399.95,
+          "x": 532.73,
+          "y": 421.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"5df3c20415ed2dedea4f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1105.932953826692,\"height\":388.6148007590133,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Auditores.Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Auditorias.Auditoria ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Auditores\",\"Type\":0},{\"Name\":\"a1\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Nombre\"},\"Name\":\"Auditores.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Auditorias.Auditoria ID)\",\"NativeReferenceName\":\"Recuento de Auditoria ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":9,\"Percent\":-0.25}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 388.61,
+          "width": 1105.93,
           "x": 0.00,
           "y": 0.00,
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"b5c0d2d8fc78bbdb92fb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1105.5555555555554,\"y\":0,\"z\":1,\"width\":174.44444444444443,\"height\":146.66666666666666,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Auditorias.Resultado\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Resultado\"},\"Name\":\"Auditorias.Resultado\",\"NativeReferenceName\":\"Resultado\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Resultado\"}}}]},\"columnProperties\":{\"Auditorias.Resultado\":{\"formatString\":\"G\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Compact'\"}}}}}],\"rowHeaders\":[{\"properties\":{\"steppedLayoutIndentation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"418D\"}}}},\"selector\":{\"metadata\":\"Auditorias.Resultado\"}}],\"grid\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
+          "config": "{\"name\":\"a5e06659e67609c43ad5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":420.99936748893106,\"z\":2000,\"width\":532.7261227071474,\"height\":299.5572422517394,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Auditores.Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Auditorias.Auditoria ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Auditores\",\"Type\":0},{\"Name\":\"a1\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Nombre\"},\"Name\":\"Auditores.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Auditorias.Auditoria ID)\",\"NativeReferenceName\":\"Recuento de Auditoria ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a1\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 299.56,
+          "width": 532.73,
+          "x": 0.00,
+          "y": 421.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"b5c0d2d8fc78bbdb92fb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1105.5555555555554,\"y\":0,\"z\":1000,\"width\":174.44444444444443,\"height\":146.66666666666666,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"Auditorias.Resultado\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Resultado\"},\"Name\":\"Auditorias.Resultado\",\"NativeReferenceName\":\"Resultado\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Resultado\"}}}]},\"columnProperties\":{\"Auditorias.Resultado\":{\"formatString\":\"G\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"layout\":{\"expr\":{\"Literal\":{\"Value\":\"'Compact'\"}}}}}],\"rowHeaders\":[{\"properties\":{\"steppedLayoutIndentation\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"418D\"}}}},\"selector\":{\"metadata\":\"Auditorias.Resultado\"}}],\"grid\":[{\"properties\":{\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Minimal'\"}}}}}]}}}",
           "filters": "[]",
           "height": 146.67,
           "width": 174.44,
           "x": 1105.56,
           "y": 0.00,
-          "z": 1.00
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e4b8f15000a05d316d0e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":932.675521821632,\"y\":420.99936748893106,\"z\":3001,\"width\":344.8956356736243,\"height\":299.5572422517394,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"multiRowCard\",\"projections\":{\"Values\":[{\"queryRef\":\"Empresas.Nombre\"},{\"queryRef\":\"Sum(Hallazgos.Monto_Estimado)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Hallazgos\",\"Type\":0},{\"Name\":\"e\",\"Entity\":\"Empresas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Nombre\"},\"Name\":\"Empresas.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Monto_Estimado\"}},\"Function\":0},\"Name\":\"Sum(Hallazgos.Monto_Estimado)\",\"NativeReferenceName\":\"Suma de Monto_Estimado\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Nombre\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 299.56,
+          "width": 344.90,
+          "x": 932.68,
+          "y": 421.00,
+          "z": 3001.00
         }
       ],
       "width": 1280.00
