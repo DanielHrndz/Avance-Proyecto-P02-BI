@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.64\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -27,11 +27,29 @@
       "name": "bc8f6b67d1c342760c56",
       "visualContainers": [
         {
-          "config": "{\"name\":\"e90725940a7ff0fd5ddb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":1270,\"height\":720,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Empresas.Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Auditorias.Auditoria_ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Empresas\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Nombre\"},\"Name\":\"Empresas.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Auditorias.Auditoria_ID)\",\"NativeReferenceName\":\"Recuento de Auditoria ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.2}}}}}}}]}}}",
+          "config": "{\"name\":\"10532e67552237a48e84\",\"layouts\":[{\"id\":0,\"position\":{\"x\":564.4003606853021,\"y\":420.1262398557259,\"z\":1002,\"width\":715.5996393146979,\"height\":300.0901713255185,\"tabOrder\":1002}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Tabla 1 (Auditores).Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Auditorias.Auditoria ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Tabla 1 (Auditores)\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"Nombre\"},\"Name\":\"Tabla 1 (Auditores).Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Auditorias.Auditoria ID)\",\"NativeReferenceName\":\"Count of Auditoria ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
-          "height": 720.00,
-          "width": 1270.00,
-          "x": 10.00,
+          "height": 300.09,
+          "width": 715.60,
+          "x": 564.40,
+          "y": 420.13,
+          "z": 1002.00
+        },
+        {
+          "config": "{\"name\":\"cd20706f9a5c702bd098\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":420.1262398557259,\"z\":1001,\"width\":564.4003606853021,\"height\":300.0901713255185,\"tabOrder\":1001}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Empresas.Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Auditorias.Nivel_Riesgo)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Empresas\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Nombre\"},\"Name\":\"Empresas.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Nivel_Riesgo\"}},\"Function\":5},\"Name\":\"CountNonNull(Auditorias.Nivel_Riesgo)\",\"NativeReferenceName\":\"Count of Nivel_Riesgo\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Nivel_Riesgo\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 300.09,
+          "width": 564.40,
+          "x": 0.00,
+          "y": 420.13,
+          "z": 1001.00
+        },
+        {
+          "config": "{\"name\":\"e90725940a7ff0fd5ddb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1057.2407574391343,\"height\":400.5049594229035,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Empresas.Nombre\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Auditorias.Auditoria_ID)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"Empresas\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"Auditorias\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Nombre\"},\"Name\":\"Empresas.Nombre\",\"NativeReferenceName\":\"Nombre\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5},\"Name\":\"CountNonNull(Auditorias.Auditoria_ID)\",\"NativeReferenceName\":\"Recuento de Auditoria ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Auditoria ID\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":0.2}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 400.50,
+          "width": 1057.24,
+          "x": 0.00,
           "y": 0.00,
           "z": 0.00
         },

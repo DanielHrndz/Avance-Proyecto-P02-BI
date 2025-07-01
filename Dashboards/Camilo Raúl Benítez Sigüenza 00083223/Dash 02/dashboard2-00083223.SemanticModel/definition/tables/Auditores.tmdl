@@ -38,7 +38,7 @@ table Auditores
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Camilo\Desktop\BD_Auditoria_ETL_Periodo2_Profesional (1).xlsx"), null, true),
 				    Auditores_Sheet = Origen{[Item="Auditores",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Auditores_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Auditor_ID", Int64.Type}, {"Nombre", type text}, {"Especialidad", type text}, {"Column4", type any}})
@@ -46,4 +46,6 @@ table Auditores
 				    #"Tipo cambiado"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

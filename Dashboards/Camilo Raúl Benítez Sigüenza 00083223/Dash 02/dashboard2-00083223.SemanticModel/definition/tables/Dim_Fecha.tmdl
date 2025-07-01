@@ -62,7 +62,7 @@ table Dim_Fecha
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Camilo\Desktop\BD_Auditoria_ETL_Periodo2_Profesional (1).xlsx"), null, true),
 				    Dim_Fecha_Sheet = Origen{[Item="Dim_Fecha",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Dim_Fecha_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Fecha", type datetime}, {"Año", Int64.Type}, {"Mes", Int64.Type}, {"Nombre_Mes", type text}, {"Día", Int64.Type}, {"Día_Semana", type text}}),
@@ -71,4 +71,6 @@ table Dim_Fecha
 				    #"Columnas con nombre cambiado"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

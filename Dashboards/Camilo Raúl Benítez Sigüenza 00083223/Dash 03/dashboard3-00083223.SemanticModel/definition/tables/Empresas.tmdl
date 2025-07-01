@@ -46,7 +46,7 @@ table Empresas
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Camilo\Desktop\BD_Auditoria_ETL_Periodo2_Profesional (1).xlsx"), null, true),
 				    Empresas_Sheet = Origen{[Item="Empresas",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Empresas_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Empresa_ID", Int64.Type}, {"Nombre", type text}, {"Industria", type text}, {"Sistema_Origen", type text}, {"Ubicacion", type text}}),
@@ -54,5 +54,7 @@ table Empresas
 				in
 				    #"Columnas con nombre cambiado"
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
 

@@ -65,7 +65,7 @@ table Hallazgos
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\Daniel Hrndz\Desktop\BD_Auditoria_ETL_Periodo2_Profesional.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\Camilo\Desktop\BD_Auditoria_ETL_Periodo2_Profesional (1).xlsx"), null, true),
 				    Hallazgos_Sheet = Origen{[Item="Hallazgos",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Hallazgos_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"Hallazgo_ID", Int64.Type}, {"Auditoria_ID", Int64.Type}, {"Tipo", type text}, {"Severidad", type text}, {"Estado", type text}, {"Monto_Estimado", type number}, {"Afecta_Cumplimiento", type text}})
@@ -73,4 +73,6 @@ table Hallazgos
 				    #"Tipo cambiado"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 
